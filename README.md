@@ -1,4 +1,4 @@
-# cogpsybot
+# @cogpsybot (Twitter)
 
 This bot scrapes different websites for new releases in journal articles. Currently, we are scraping from:
 - Cognitive Psychology
