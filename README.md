@@ -12,4 +12,6 @@ This bot scrapes different websites for new releases in journal articles. Curren
 
 We will be adding to the list as the code becomes more complex. Target journal companies include Elsevier, Taylor and Francis, and Routeledge.
 
+The cogpsybot is the first iteration of a series of Twitterbots dedicated to mining journal websites and directly related to @cogagingbot and @quantpsybot.
+
 Follow us on Twitter (@cogpsybot)!
