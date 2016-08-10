@@ -1,3 +1,5 @@
+![](https://github.com/tmc2737/cogpsybot/blob/master/cogpsy.png)
+
 # @cogpsybot (Twitter)
 
 This bot scrapes different websites for new releases in journal articles related to Cognitive Psychology. Currently, we are scraping from:
