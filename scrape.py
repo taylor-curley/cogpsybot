@@ -73,7 +73,7 @@ for x in ejournal_web:
 
 
 ################################################################################
-# Springer,T&F, and APA journal websites
+# Springer,T&F, Cell, and APA journal websites
 
 sjournal_web = [
 "http://link.springer.com/search.rss?facet-content-type=Article&facet-journal-id=40631&channel-name=Bulletin+of+the+Psychonomic+Society.rss", 
@@ -85,7 +85,12 @@ sjournal_web = [
 "http://tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=pcgn20", 
 "http://tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=plcp21", 
 "http://tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=pecp21", 
-"http://content.apa.org/journals/xlm-ofp.rss"
+"http://content.apa.org/journals/xlm-ofp.rss", 
+"http://content.apa.org/journals/neu-ofp.rss", 
+"http://www.cell.com/trends/cognitive-sciences/inpress.rss", 
+"http://www.cell.com/trends/cognitive-sciences/current.rss", 
+"http://onlinelibrary.wiley.com/rss/journal/10.1111/(ISSN)1756-8765", 
+"http://www.tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=pqje20"
 ]
 
 sjournal_title = [
@@ -98,7 +103,12 @@ sjournal_title = [
 "Cognitive Neuroscience", 
 "Language, Cognition and Neuroscience", 
 "Journal of Cognitive Psychology", 
-"JEP: Learning, Memory, and Cognition"
+"JEP: Learning, Memory, and Cognition", 
+"Neuropsychology", 
+"Trends in Cognitive Sciences", 
+"Trends in Cognitive Sciences", 
+"Topics in Cognitive Science", 
+"Quarterly Journal of Exp. Psychology"
 ]
 
 stitle = []
