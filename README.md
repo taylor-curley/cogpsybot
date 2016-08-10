@@ -9,8 +9,12 @@ This bot scrapes different websites for new releases in journal articles related
 - Journal of Memory and Language
 - Neuropsychologica
 - Trends in Cognitive Sciences
+- Applied Research in Memory and Cognition
+- Bulletin of the Psychonomic Society
+- Memory & Cognition
+- Learning & Behavior
 
-We will be adding to the list as the code becomes more complex. Target journal companies include Elsevier, Taylor and Francis, and Routeledge.
+We will be adding to the list as the code becomes more complex. Target journal companies include Elsevier, Taylor and Francis, Springer, and Routeledge.
 
 The cogpsybot is the first iteration of a series of Twitterbots dedicated to mining journal websites and is directly related to @cogagingbot and @quantpsybot.
 
