@@ -4,7 +4,6 @@
 import urllib.request
 import datetime
 import feedparser
-import datetime
 from bs4 import BeautifulSoup
 
 # Get date and time for log
@@ -74,7 +73,7 @@ for x in ejournal_web:
 
 
 ################################################################################
-# Springer and T&F journal websites
+# Springer,T&F, and APA journal websites
 
 sjournal_web = [
 "http://link.springer.com/search.rss?facet-content-type=Article&facet-journal-id=40631&channel-name=Bulletin+of+the+Psychonomic+Society.rss", 
@@ -85,7 +84,8 @@ sjournal_web = [
 "http://tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=pmem20", 
 "http://tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=pcgn20", 
 "http://tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=plcp21", 
-"http://tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=pecp21"
+"http://tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=pecp21", 
+"http://content.apa.org/journals/xlm-ofp.rss"
 ]
 
 sjournal_title = [
@@ -97,7 +97,8 @@ sjournal_title = [
 "Memory", 
 "Cognitive Neuroscience", 
 "Language, Cognition and Neuroscience", 
-"Journal of Cognitive Psychology"
+"Journal of Cognitive Psychology", 
+"JEP: Learning, Memory, and Cognition"
 ]
 
 stitle = []
@@ -114,7 +115,7 @@ for x in sjournal_web:
     g = open('/home/taylor/Documents/bots/tweeted_pubs.txt', 'r')
     g = [line.rstrip('\n') for line in g]
 
-    for i in range(3):
+    for i in range(len(site['entries'])):
         entry = site['entries'][i]['title']
         entry_url = site['entries'][i]['link']
         if entry in g:
