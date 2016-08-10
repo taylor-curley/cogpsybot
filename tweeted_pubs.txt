@@ -1,3 +1,4 @@
+# This is a sample of the output from the program. This is needed in order to check for redundant posts.
 The attention-weighted sample-size model of visual short-term memory: Attention capture predicts resource allocation and memory load
 http://www.sciencedirect.com/science/article/pii/S0010028516300809
 Sense-making under ignorance
