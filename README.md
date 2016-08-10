@@ -20,7 +20,7 @@ This bot scrapes different websites for new releases in journal articles related
 - Language, Cognition and Neuroscience 
 - Journal of Cognitive Psychology
 
-We will be adding to the list as the code becomes more complex. Target journal companies include Elsevier, Taylor and Francis, Springer, and Routeledge.
+We will be adding to the list as the code becomes more complex. Target journal companies include Elsevier, Taylor and Francis, Springer, and Routledge.
 
 The cogpsybot is the first iteration of a series of Twitterbots dedicated to mining journal websites and is directly related to @cogagingbot and @quantpsybot.
 
