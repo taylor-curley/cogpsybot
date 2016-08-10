@@ -20,6 +20,10 @@ This bot scrapes different websites for new releases in journal articles related
 - Language, Cognition and Neuroscience 
 - Journal of Cognitive Psychology
 - Journal of Experimental Psychology: Learning, Memory, and Cognition
+- Neuropsychology
+- Trends in Cognitive Sciences 
+- Topics in Cognitive Science
+- The Quarterly Journal of Experimental Psychology
 
 We will be adding to the list as the code becomes more complex. Target journal companies include Elsevier, Taylor and Francis, Springer, and Routledge.
 
