@@ -3,12 +3,15 @@
 
 import urllib.request
 import datetime
+import feedparser
+import datetime
 from bs4 import BeautifulSoup
 
 # Get date and time for log
 time = datetime.datetime.now()
 
-# Elsevier journal websites
+################################################################################
+# Elsevier journal websites #
 ejournal_web = [
 'http://www.journals.elsevier.com/cognitive-psychology/recent-articles', 
 'http://www.journals.elsevier.com/acta-psychologica/recent-articles', 
@@ -34,9 +37,9 @@ ejournal_title = [
 "Applied Research in Memory & Cognition"
 ]
 
-title = {}
-url = {}
-journal = {}
+etitle = []
+eurl = []
+ejournal = []
 
 # Loop through Elsevier journals
 y = 0
@@ -60,12 +63,56 @@ for x in ejournal_web:
         if entry in g:
             print('Redundant entry... ' + str(time))
         else:
-            title[i] = titleTwo[i]['title']
-            url[i] = titleTwo[i]['href']
-            journal[i] = str(ejournal_title[y])
+            etitle.append(titleTwo[i]['title'])
+            eurl.append(titleTwo[i]['href'])
+            ejournal.append(str(ejournal_title[y]))
             # Log article names + URLs 
-            f.write(str(entry) + '\n' + str(url[i]) + '\n')  
+            f.write(str(entry) + '\n' + str(titleTwo[i]['href']) + '\n')  
               
     f.close()
     y = y + 1
 
+
+################################################################################
+# Springer journal websites
+
+sjournal_web = [
+"http://link.springer.com/search.rss?facet-content-type=Article&facet-journal-id=40631&channel-name=Bulletin+of+the+Psychonomic+Society.rss", 
+"http://link.springer.com/search.rss?facet-content-type=Article&facet-journal-id=13421&channel-name=Memory+%26+Cognition.rss", 
+"http://link.springer.com/search.rss?facet-content-type=Article&facet-journal-id=13420&channel-name=Learning+%26+Behavior.rss"
+]
+
+sjournal_title = [
+"Bulletin of the Psychonomic Society", 
+"Memory & Cognition", 
+"Learning & Behavior"
+]
+
+stitle = []
+surl = []
+sjournal = []
+
+y = 0
+for x in sjournal_web:
+    # Read XML feed
+    site = feedparser.parse(sjournal_web[y])
+
+    # Keep track of published articles
+    f = open('/home/taylor/Documents/bots/tweeted_pubs.txt', 'a+')
+    g = open('/home/taylor/Documents/bots/tweeted_pubs.txt', 'r')
+    g = [line.rstrip('\n') for line in g]
+
+    for i in range(3):
+        entry = site['entries'][i]['title']
+        entry_url = site['entries'][i]['link']
+        if entry in g:
+            print('Redundant entry... ' + str(time))
+        else:
+            # Log article names + URLs 
+            stitle.append(site['entries'][i]['title'])
+            surl.append(site['entries'][i]['link'])
+            sjournal.append(sjournal_title[y])
+            f.write(str(entry) + '\n' + str(entry_url) + '\n') 
+              
+    f.close()
+    y = y + 1
