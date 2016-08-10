@@ -13,6 +13,12 @@ This bot scrapes different websites for new releases in journal articles related
 - Bulletin of the Psychonomic Society
 - Memory & Cognition
 - Learning & Behavior
+- Visual Cognition
+- Cognitive Neuropsychology 
+- Memory
+- Cognitive Neuroscience
+- Language, Cognition and Neuroscience 
+- Journal of Cognitive Psychology
 
 We will be adding to the list as the code becomes more complex. Target journal companies include Elsevier, Taylor and Francis, Springer, and Routeledge.
 
