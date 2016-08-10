@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 import urllib.request
@@ -8,7 +9,7 @@ from bs4 import BeautifulSoup
 time = datetime.datetime.now()
 
 # Elsevier journal websites
-journal_web = [
+ejournal_web = [
 'http://www.journals.elsevier.com/cognitive-psychology/recent-articles', 
 'http://www.journals.elsevier.com/acta-psychologica/recent-articles', 
 'http://www.journals.elsevier.com/brain-and-cognition/recent-articles', 
@@ -16,10 +17,12 @@ journal_web = [
 'http://www.journals.elsevier.com/consciousness-and-cognition/recent-articles', 
 'http://www.journals.elsevier.com/journal-of-memory-and-language/recent-articles', 
 'http://www.journals.elsevier.com/neuropsychologia/recent-articles', 
-'http://www.journals.elsevier.com/trends-in-cognitive-sciences/recent-articles'
+'http://www.journals.elsevier.com/trends-in-cognitive-sciences/recent-articles', 
+'http://www.journals.elsevier.com/journal-of-applied-research-in-memory-and-cognition/recent-articles'
 ]
 
-journal_title = [
+# Elsevier journal titles (cannot exceed 50 characters)
+ejournal_title = [
 "Cognitive Psychology", 
 "Acta Psychologica",
 "Brain and Cognition", 
@@ -27,17 +30,19 @@ journal_title = [
 "Consciousness and Cognition",
 "Journal of Memory and Language", 
 "Neuropsychologica", 
-"Trends in Cognitive Sciences"
+"Trends in Cognitive Sciences", 
+"Applied Research in Memory & Cognition"
 ]
 
 title = {}
 url = {}
 journal = {}
 
+# Loop through Elsevier journals
 y = 0
-for x in journal_web:
+for x in ejournal_web:
     # Read site
-    o = urllib.request.urlopen(journal_web[y])
+    o = urllib.request.urlopen(ejournal_web[y])
     site = BeautifulSoup(o, "lxml")
     
     # Pull 3 most current postings (rawish data)
@@ -46,10 +51,8 @@ for x in journal_web:
     titleTwo = titleOne.find_all("a", title=True)
     
     # Keep track of published articles
-    title = {}
-    url = {}
-    f = open('tweeted_pubs.txt', 'a+')
-    g = open('tweeted_pubs.txt', 'r')
+    f = open('/home/taylor/Documents/bots/tweeted_pubs.txt', 'a+')
+    g = open('/home/taylor/Documents/bots/tweeted_pubs.txt', 'r')
     g = [line.rstrip('\n') for line in g]
     
     for i in range(3):
@@ -59,11 +62,10 @@ for x in journal_web:
         else:
             title[i] = titleTwo[i]['title']
             url[i] = titleTwo[i]['href']
-            journal[i] = str(journal_title[y])
+            journal[i] = str(ejournal_title[y])
             # Log article names + URLs 
             f.write(str(entry) + '\n' + str(url[i]) + '\n')  
-            # Mirror on command prompt
-            print('Tweeting out: "' + str(entry) + '" at ' + str(time))  
+              
     f.close()
     y = y + 1
 
