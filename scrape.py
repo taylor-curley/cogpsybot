@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# Taylor Curley - 2016 - taylorcurley.co
 # -*- coding: utf-8 -*-
 
 import urllib.request
