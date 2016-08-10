@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# Taylor Curley - 2016 - taylorcurley.co
 # -*- coding: utf-8 -*-
 
 import urllib.request
@@ -75,18 +74,30 @@ for x in ejournal_web:
 
 
 ################################################################################
-# Springer journal websites
+# Springer and T&F journal websites
 
 sjournal_web = [
 "http://link.springer.com/search.rss?facet-content-type=Article&facet-journal-id=40631&channel-name=Bulletin+of+the+Psychonomic+Society.rss", 
 "http://link.springer.com/search.rss?facet-content-type=Article&facet-journal-id=13421&channel-name=Memory+%26+Cognition.rss", 
-"http://link.springer.com/search.rss?facet-content-type=Article&facet-journal-id=13420&channel-name=Learning+%26+Behavior.rss"
+"http://link.springer.com/search.rss?facet-content-type=Article&facet-journal-id=13420&channel-name=Learning+%26+Behavior.rss", 
+"http://tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=pvis20", 
+"http://tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=pcgn20", 
+"http://tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=pmem20", 
+"http://tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=pcgn20", 
+"http://tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=plcp21", 
+"http://tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=pecp21"
 ]
 
 sjournal_title = [
 "Bulletin of the Psychonomic Society", 
 "Memory & Cognition", 
-"Learning & Behavior"
+"Learning & Behavior", 
+"Visual Cognition", 
+"Cognitive Neuropsychology", 
+"Memory", 
+"Cognitive Neuroscience", 
+"Language, Cognition and Neuroscience", 
+"Journal of Cognitive Psychology"
 ]
 
 stitle = []
