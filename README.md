@@ -31,3 +31,8 @@ We will be adding to the list as the code becomes more complex. Target journal c
 The cogpsybot is the first iteration of a series of Twitterbots dedicated to mining journal websites and is directly related to @cogagingbot and @quantpsybot.
 
 Follow us on Twitter ([@cogpsybot](http://www.twitter.com/cogpsybot))!
+
+
+
+UPDATE (08/15/16):
+- We will be updating the code to delay Tweets. Many publishing companies publish their newest articles in bulk, which causes the bots to post at once, potentially violating Twitter's API guidelines. 
