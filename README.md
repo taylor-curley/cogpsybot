@@ -34,6 +34,9 @@ Follow us on Twitter ([@cogpsybot](http://www.twitter.com/cogpsybot))!
 
 
 ***
+###### UPDATE (05/10/17):
+Hello, all! It has certainly been a while. If you were worried that I have not been keeping up with the bots, then don't be... I have been maintaining them the entire time.
+- The newest update for the bots will be regular analytics and visualizations regarding the contents of the tweets. This will be a weekly exercise for the CogPsyBot, as it tweets several articles a day, but will only be a monthly exercise for the QuantPsyBot and CogAgingBot, our less-busy bots. 
 
 ###### UPDATE (08/15/16):
 - We will be updating the code to delay Tweets. Many publishing companies publish their newest articles in bulk, which causes the bots to post at once, potentially violating Twitter's API guidelines. It's also annoying to see 10 tweets published at once.
