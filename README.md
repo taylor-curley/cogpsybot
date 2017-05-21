@@ -34,6 +34,9 @@ Follow us on Twitter ([@cogpsybot](http://www.twitter.com/cogpsybot))!
 
 
 ***
+###### UPDATE (05/21/17):
+We have begun to develop a mechanism for analytics related to all of the cogpsybots. You can check out the progress at the "cogbot_analytics" repository.
+
 ###### UPDATE (05/10/17):
 Hello, all! It has certainly been a while. If you were worried that I have not been keeping up with the bots, then don't be... I have been maintaining them the entire time.
 - The newest update for the bots will be regular analytics and visualizations regarding the contents of the tweets. This will be a weekly exercise for the CogPsyBot, as it tweets several articles a day, but will only be a monthly exercise for the QuantPsyBot and CogAgingBot, our less-busy bots. 
